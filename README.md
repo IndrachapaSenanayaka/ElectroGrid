@@ -46,4 +46,4 @@ Client-components: jQuery, Ajax for DC.
 <br/>
 <br/>
 
-<img src="images/bill.png" width = "800" height = "500" >
+<img src="images/bill.PNG" width = "800" height = "500" >
