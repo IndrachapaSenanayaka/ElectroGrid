@@ -32,9 +32,26 @@ public class CommonDButil {
 		return ID;
 	}
 	
+	//Month capture
+	public static String Month(){
+		
+		//Get month and year
+		SimpleDateFormat sdf = new SimpleDateFormat("MMM-yyyy");
+		Date date = new Date();
+		String month = sdf.format(date);
+		
+		return month;
+	}
 	
 	
-	
-	
+	//passing the Fixed Charge value
+	public static Double FixedCharge(){
+		
+		Double Charge = 480.0;
+		
+		return Charge;
+		
+	}
+
 	
 }
