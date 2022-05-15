@@ -52,7 +52,15 @@
 						<div id="alertSuccess" class="alert alert-success"></div>
 						<div id="alertError" class="alert alert-danger"></div>
 					</div>
-					
+					<div class="col-8 pt-5 pl-5">
+						<br>
+						<div id="divBillsGrid">
+							<%
+								ElectricityBill billObj = new ElectricityBill();
+								out.print(billObj.viewBills());
+							%>
+						</div>
+					</div> 
 				</div> 
 				<br>
 				
