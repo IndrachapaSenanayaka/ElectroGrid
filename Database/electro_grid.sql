@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2022 at 07:39 PM
+-- Generation Time: May 15, 2022 at 07:59 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -47,7 +47,9 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`billID`, `electricityAccountNo`, `meterCode`, `month`, `issuedDate`, `unitsConsumed`, `chargeForUnitsconsumed`, `fixedCharge`, `totalCostOfSupply`, `startedUnits`, `endedUnits`, `status`) VALUES
-('220506184527', 685948930, '76348', 'May-2022', '06-May-2022 18:45:27', 600, 21539, 480, '22019', 100, 700, 'Not Paid');
+('220506184527', 685948930, 'DR54286', 'May-2022', '06-May-2022 18:45:27', 600, 21539, 480, '22019', 100, 700, 'Not Paid'),
+('220515232433', 646675837, 'LA54823', 'May-2022', '15-May-2022 23:24:33', 400, 13383, 480, '13863', 100, 500, 'Not Paid'),
+('220515232722', 456777659, 'AK76348', 'May-2022', '15-May-2022 23:27:22', 200, 6255, 480, '6735', 200, 400, 'Not Paid');
 
 -- --------------------------------------------------------
 

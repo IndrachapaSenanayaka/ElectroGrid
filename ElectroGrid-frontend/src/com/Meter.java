@@ -136,7 +136,7 @@ public class Meter {
 				PreparedStatement preparedStmt = con.prepareStatement(query);
 				
 				// binding values
-				preparedStmt.setInt(1, Integer.parseInt(Code));
+				preparedStmt.setString(1, Code);
 				
 				// execute the statement
 				ResultSet rs = preparedStmt.executeQuery();
