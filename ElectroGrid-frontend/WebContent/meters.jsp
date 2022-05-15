@@ -13,10 +13,10 @@
 		<script src="Components/meters.js"></script>
 	</head>
 	<body>
-		<center class="pt-4">
+		<div class="text-center pt-4">
 			<img src="https://firebasestorage.googleapis.com/v0/b/hms-medilanka.appspot.com/o/ceb.png?alt=media&token=b7442ec4-e6e5-454d-98dc-98c1b9985d84" style="width: 400px;">
 			<div class="p-3 mb-2 bg-danger text-white"><h1>Automated Meter Management</h1></div>
-		</center>
+		</div>
 		<div style="background-color:#EFECBE;">
 			<div class="container">
 				<div class="row">
