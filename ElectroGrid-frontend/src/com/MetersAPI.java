@@ -57,7 +57,19 @@ public class MetersAPI extends HttpServlet {
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		Map paras = getParasMap(request);
 		
+		//create Meter object 
+		Meter meterObj = new Meter();
+		
+		//caling the updateMeter method
+		String output = meterObj.updateMeter(paras.get("hidMeterIDSave").toString(),
+							paras.get("meterCode").toString(),
+							paras.get("premisesID").toString(),
+							paras.get("electricityAccountNo").toString(),
+							paras.get("manufactureDate").toString());
+		
+		response.getWriter().write(output);
 		
 	}
 
@@ -71,6 +83,28 @@ public class MetersAPI extends HttpServlet {
 	}
 	
 	
-	
+	// Convert request parameters to a Map
+	private static Map getParasMap(HttpServletRequest request)
+	{
+		Map<String, String> map = new HashMap<String, String>();
+		try
+		{
+			Scanner scanner = new Scanner(request.getInputStream(), "UTF-8");
+			String queryString = scanner.hasNext() ?
+								scanner.useDelimiter("\\A").next() : "";
+			scanner.close();
+			
+			String[] params = queryString.split("&");
+			for (String param : params)
+			{
+				String[] p = param.split("=");
+				map.put(p[0], p[1]);
+			}
+		}
+		catch (Exception e)
+		{
+		}
+		return map;
+	}		
 
 }
