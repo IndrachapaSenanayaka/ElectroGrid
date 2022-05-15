@@ -63,29 +63,27 @@ public class Consumer {
 					
 					String consumerNo  = Integer.toString(rs.getInt("consumerNo"));
 					String accountNo = Integer.toString(rs.getInt("accountNo"));
-					String firstName = rs.getString("firstName");
-					String lastName = rs.getString("lastName");
+					String fullName = rs.getString("fullName");
 					String gender = rs.getString("gender");
-					String phoneNumber = rs.getString("phoneNumber");
+					String nic = rs.getString("nic");
+					String phoneNumber = rs.getString("number");
 					String email = rs.getString("email");
 					String password = rs.getString("password");
-					String province = rs.getString("province");
+					String address = rs.getString("address");
 					String city  = rs.getString("city");
-					String street = rs.getString("street");
-					String postalCode = Double.toString(rs.getDouble("postalCode"));
+					
 					
 					mete.put("consumerNo", consumerNo);
 					mete.put("accountNo", accountNo);
-					mete.put("firstName", firstName);
-					mete.put("lastName", lastName);
+					mete.put("fullName", fullName);
 					mete.put("gender", gender);	
+					mete.put("nic", nic);
 					mete.put("phoneNumber", phoneNumber);	
 					mete.put("email", email);	
 					mete.put("password", password);	
-					mete.put("province", province);	
+					mete.put("address", address);	
 					mete.put("city", city);	
-					mete.put("street", street);	
-					mete.put("postalCode", postalCode);	
+					
 			
 				}
 				

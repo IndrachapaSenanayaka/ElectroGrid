@@ -48,7 +48,7 @@ public class BillAPI extends HttpServlet {
 		HashMap<String, String> consumer = consumerObj.getConsumer(paras.get("accountNo").toString());
 		
 		//get firstName
-		String firstName = consumer.get("firstName");
+		String firstName = consumer.get("fullName");
 		
 		//get city
 		String city = consumer.get("city");

@@ -48,7 +48,7 @@ public class BillsAPI extends HttpServlet {
 			
 			//get electricityAccountNo
 			String electricityAccount = meter.get("electricityAccountNo");
-			
+			System.out.println(meter);
 			//create ElectricityBill object 
 			ElectricityBill billObj = new ElectricityBill();
 			
