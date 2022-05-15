@@ -78,7 +78,15 @@ public class MetersAPI extends HttpServlet {
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		Map paras = getParasMap(request);
 		
+		//create Meter object 
+		Meter meterObj = new Meter();
+		
+		//caling the deleteMeter method
+		String output = meterObj.deleteMeter(paras.get("meterID").toString());
+		
+		response.getWriter().write(output);
 		
 	}
 	
