@@ -64,7 +64,16 @@
 						<div id="alertSuccess" class="alert alert-success"></div>
 						<div id="alertError" class="alert alert-danger"></div>			
 					</div> 
-						
+					<!-- Meter details list viewer -->
+					<div class="col-8 pt-5 pl-5">
+						<br>
+						<div id="divMetersGrid">
+							<%
+								Meter meterObj = new Meter();
+								out.print(meterObj.readMeters());
+							%>		
+						</div>
+					</div>		
 				</div> 
 			</div>
 		</div>	
