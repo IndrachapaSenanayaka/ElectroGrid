@@ -67,7 +67,17 @@ public class BillsAPI extends HttpServlet {
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		Map paras = getParasMap(request);
 		
+		//create ElectricityBill object
+		ElectricityBill billObj = new ElectricityBill();
+
+		//caling the updateBill method
+		String output = billObj.updateBill(paras.get("hidBillIDSave").toString(),
+							paras.get("monthStartedUnitsAmount").toString(),
+							paras.get("monthEndedUnitsAmount").toString());
+		
+		response.getWriter().write(output);
 		
 	}
 
@@ -81,6 +91,28 @@ public class BillsAPI extends HttpServlet {
 	}
 
 	
-	
+	// Convert request parameters to a Map
+	private static Map getParasMap(HttpServletRequest request)
+	{
+		Map<String, String> map = new HashMap<String, String>();
+		try
+		{
+			Scanner scanner = new Scanner(request.getInputStream(), "UTF-8");
+			String queryString = scanner.hasNext() ?
+								scanner.useDelimiter("\\A").next() : "";
+			scanner.close();
+			
+			String[] params = queryString.split("&");
+			for (String param : params)
+			{
+				String[] p = param.split("=");
+				map.put(p[0], p[1]);
+			}
+		}
+		catch (Exception e)
+		{
+		}
+		return map;
+	}	
 	
 }
