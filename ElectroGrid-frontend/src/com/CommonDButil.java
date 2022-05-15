@@ -20,7 +20,17 @@ public class CommonDButil {
 		return ID;
 	}
 	
-	
+	//Date and Time capture
+	public static String DateTime(){
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
+		Date date = new Date();
+		String dateTime = sdf.format(date);
+		
+		String ID = dateTime;
+		
+		return ID;
+	}
 	
 	
 	
