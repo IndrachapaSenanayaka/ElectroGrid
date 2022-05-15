@@ -63,7 +63,9 @@
 					</div> 
 				</div> 
 				<br>
-				
+				<div class="row">
+					<div class="col-12 pt-5 p-3 mb-2 bg-light text-dark rounded" id="divBillGrid"></div>
+				</div>
 			</div>
 		</div>	
 	</body>
